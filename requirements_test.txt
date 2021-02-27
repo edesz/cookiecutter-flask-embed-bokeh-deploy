@@ -1,0 +1,9 @@
+pytest
+pytest-cookies
+pytest-emoji
+pytest-html
+pytest-md
+pytest-snail
+pytest-repeat
+pytest-variables
+pytest-xdist

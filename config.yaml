@@ -1,0 +1,5 @@
+default_context:
+    project_name: "myproject"
+    python_version: "3.9.2"
+    flask_app_name": "myflaskkappe"
+    bokehserver_app_name: "mybokehserverapp"

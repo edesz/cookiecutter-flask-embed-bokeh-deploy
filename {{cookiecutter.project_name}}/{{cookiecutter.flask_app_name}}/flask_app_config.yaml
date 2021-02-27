@@ -1,0 +1,6 @@
+deploy: True
+deployed_bokeh_server_app_name: "{{cookiecutter.bokehserver_app_name}}.herokuapp"
+standalone_bokeh_apps:
+{%- for name, bk_app in cookiecutter.bokehserver_scripts.apps.items() %}
+    {{ name }}: {{ bk_app }}
+{%- endfor -%}
