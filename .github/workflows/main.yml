@@ -16,4 +16,4 @@ jobs:
       - name: Install dependencies
         run: pip install tox
       - name: Run tests
-        run: make tests
+        run: make test
