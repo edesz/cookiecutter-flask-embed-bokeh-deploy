@@ -10,7 +10,7 @@
 # export PORT=8000
 # gunicorn -w 1 --bind $HOST:$PORT main:app
 
-# Heroku App name = myflaskapp  # export FLASK_APP_NAME=myflaskapp
+# Heroku App name = {{cookiecutter.flask_app_name}}  # export FLASK_APP_NAME={{cookiecutter.flask_app_name}}
 
 # Heroku Procfile
 # web: gunicorn -w 1 --bind $HOST:$PORT main:app
