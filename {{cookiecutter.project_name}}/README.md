@@ -35,12 +35,12 @@ This project offres automated deployment of a Flask web application with multipl
 2.  Commit changes to `git`
     ```bash
     git add .
-    git commit -m "updated apps"
+    git commit -m "updated apps on Heroku"
     ```
 
 3.  Deploy changes to pre-existing app running in the cloud (Heroku)
     ```bash
-    ./run.sh "update"
+    make heroku-update
     ```
 
 ### [Delete existing app](#delete-existing-app)
@@ -51,7 +51,7 @@ This project offres automated deployment of a Flask web application with multipl
 
 2.  Delete an existing app (Bokeh server app or Flask web application)
     ```bash
-    ./run.sh "delete"
+    make heroku-stop
     ```
 ## [Notes](#notes)
 1.  Currently, the only cloud provider supported for deployment is Heroku.

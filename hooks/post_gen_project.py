@@ -24,11 +24,12 @@ def run_cmd(cmd: str) -> None:
 
 
 if __name__ == "__main__":
+    initial_commit_msg = "configured apps for initial creation on heroku"
     cmds = [
         "git init",
         "git add .",
-        "git commit -m 'created apps'",
-        "./run.sh 'create'",
+        f"git commit -m {initial_commit_msg}",
+        "make heroku-create",
     ]
     for cmd in cmds:
         run_cmd(cmd)

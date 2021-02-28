@@ -49,13 +49,21 @@ heroku-deploy-flask-app:
 	@git subtree push --prefix {{ cookiecutter.flask_app_name }} heroku main
 .PHONY: heroku-deploy-flask-app
 
-## Heroku workflow to push to existing Bokeh Server app
+## Heroku workflow to push to existing Flask-embedded Bokehserver app
 .PHONY: heroku-push-bokehserver
 heroku-push-bokehserver: heroku-add-bokehserver-remote heroku-deploy-bokehserver-app
 
-## Heroku workflow to push to existing Flask app
+## Heroku workflow to push to existing Flask-embedded Bokehserver app
 .PHONY: heroku-push-flask
 heroku-push-flask: heroku-add-flask-remote heroku-deploy-flask-app
+
+## Heroku workflow to create new Flask-embedded Bokehserver app
+.PHONY: heroku-create
+heroku-create: heroku-create-bokehserver heroku-create-flask heroku-push-bokehserver heroku-push-flask
+
+## Heroku workflow to update existing Flask-embedded Bokehserver app
+.PHONY: heroku-update
+heroku-update: heroku-push-bokehserver heroku-push-flask
 
 ## Delete single Heroku app
 heroku-stop:
